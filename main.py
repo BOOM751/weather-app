@@ -11,4 +11,9 @@ params = {
 response = requests.get(url, params=params)
 data = response.json()
 
-print(data)
+latitude = data["results"][0]["latitude"]
+longitude = data["results"][0]["longitude"]
+
+print("Город:", city)
+print("Широта:", latitude)
+print("Долгота:", longitude)
